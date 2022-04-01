@@ -15,8 +15,6 @@ class Login extends React.Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleClick = this.handleClick.bind(this);
   }
 
   isValid = () => {
@@ -37,23 +35,6 @@ class Login extends React.Component {
   handleChange({ target: { name, value } }) {
     this.setState({ [name]: value }, () => this.isValid());
   }
-
-  // handleSubmit({ target: { name, value } }) {
-  //   const { password } = this.state;
-  //   this.setState({ [name]: value });
-  //   const isValid = minPasswordValid;
-  //   if (isValid) {
-  //     this.setState({ btnDisabled: false });
-  //   } else {
-  //     this.setState({ btnDisabled: true });
-  //   }
-  // }
-
-  // handleClick() {
-  //   const { history, dispatchForm } = this.props;
-  //   dispatchForm(this.state);
-  //   history.push('/carteira');
-  // }
 
   render() {
     const { dispatchForm } = this.props;
@@ -93,9 +74,6 @@ class Login extends React.Component {
 
 Login.propTypes = {
   dispatchForm: PropTypes.func.isRequired,
-  history: PropTypes.shape({
-    push: PropTypes.func.isRequired,
-  }).isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => ({
