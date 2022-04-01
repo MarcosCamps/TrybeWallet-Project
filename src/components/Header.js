@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 class Header extends React.Component {
   render() {
     const { email } = this.props;
-    console.log(typeof expense);
     return (
       <div>
         <h1>TrybeWallet</h1>
