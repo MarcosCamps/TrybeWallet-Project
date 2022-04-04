@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Header from '../components/Header';
 import { expenseAction, fetchCurrencies } from '../actions/index';
+import Table from '../components/Table';
 
 const INIT_STATE = {
   id: 0,
@@ -119,6 +120,7 @@ class Wallet extends React.Component {
         >
           Adicionar despesa
         </button>
+        <Table />
       </section>
     );
   }
